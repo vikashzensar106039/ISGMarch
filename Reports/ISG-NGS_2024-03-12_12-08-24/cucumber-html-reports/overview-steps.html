@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.tablesorter.min.js"></script>
+<script type="text/javascript" src="js/Chart.min.js"></script>
+<script type="text/javascript" src="js/moment.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+  
+<title>Cucumber Reports  - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+                <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="overview-steps.html">Steps</a></li>
+                <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+    
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+            <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>ISG-NGS</td>
+            <td>12 Mar 2024, 12:14</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+      </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Steps Statistics</h2>
+          <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+      </div>
+</div>
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table id="tablesorter" class="stats-table table-hover">
+
+        <thead>
+          <tr class="header">
+            <th>Implementation</th>
+            <th>Occurrences</th>
+            <th>Duration</th>
+            <th>Average</th>
+            <th>Ratio</th>
+          </tr>
+        </thead>
+
+        <tbody>
+                      <tr>
+              <td class="location">Hooks.setupEnvironment(Scenario)</td>
+              <td>7</td>
+              <td class="duration" data-value="14520161700">14s 520ms</td>
+              <td class="duration" data-value="2074308814">2s 074ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Hooks.tearDown(Scenario)</td>
+              <td>7</td>
+              <td class="duration" data-value="161161100">161ms</td>
+              <td class="duration" data-value="23023014">023ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">SetupProjectStepDefinitions.Add_Client_Lead_Email_Address_click_on_next_after_validation()</td>
+              <td>1</td>
+              <td class="duration" data-value="3464127300">3s 464ms</td>
+              <td class="duration" data-value="3464127300">3s 464ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">SetupProjectStepDefinitions.Enter_Client_First_Name_Validation_and_enter_Last_Name()</td>
+              <td>1</td>
+              <td class="duration" data-value="4029093800">4s 029ms</td>
+              <td class="duration" data-value="4029093800">4s 029ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">SetupProjectStepDefinitions.Enter_Client_First_Name_and_enter_Last_Name_with_validation()</td>
+              <td>1</td>
+              <td class="duration" data-value="4023102800">4s 023ms</td>
+              <td class="duration" data-value="4023102800">4s 023ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">SetupProjectStepDefinitions.Select_sole_source_Project_and_reason()</td>
+              <td>1</td>
+              <td class="duration" data-value="5113463600">5s 113ms</td>
+              <td class="duration" data-value="5113463600">5s 113ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">SetupProjectStepDefinitions.Verify_and_check_for_number_of_Notifications()</td>
+              <td>1</td>
+              <td class="duration" data-value="15819996600">15s 819ms</td>
+              <td class="duration" data-value="15819996600">15s 819ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">SetupProjectStepDefinitions.add_Client_Lead_Email_Address_click_on_next()</td>
+              <td>5</td>
+              <td class="duration" data-value="4900464800">4s 900ms</td>
+              <td class="duration" data-value="980092960">980ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">SetupProjectStepDefinitions.clicks_on_Next_Add_Client_Lead()</td>
+              <td>6</td>
+              <td class="duration" data-value="4099273300">4s 099ms</td>
+              <td class="duration" data-value="683212216">683ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">SetupProjectStepDefinitions.enter_Client_First_Name_Last_Name()</td>
+              <td>4</td>
+              <td class="duration" data-value="2492071600">2s 492ms</td>
+              <td class="duration" data-value="623017900">623ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">SetupProjectStepDefinitions.navigate_Project_Overview_section_add_project_overview()</td>
+              <td>5</td>
+              <td class="duration" data-value="3889106500">3s 889ms</td>
+              <td class="duration" data-value="777821300">777ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">SetupProjectStepDefinitions.navigate_Project_Overview_section_add_project_overview_5000_Chracter_check()</td>
+              <td>1</td>
+              <td class="duration" data-value="822088700">822ms</td>
+              <td class="duration" data-value="822088700">822ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">SetupProjectStepDefinitions.select_Anticipated_award_Date()</td>
+              <td>6</td>
+              <td class="duration" data-value="26901344500">26s 901ms</td>
+              <td class="duration" data-value="4483557416">4s 483ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">SetupProjectStepDefinitions.select_Competitive_Project()</td>
+              <td>5</td>
+              <td class="duration" data-value="11939345800">11s 939ms</td>
+              <td class="duration" data-value="2387869160">2s 387ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">SetupProjectStepDefinitions.select_Primary_objevtives_of_sourcing()</td>
+              <td>6</td>
+              <td class="duration" data-value="14476136100">14s 476ms</td>
+              <td class="duration" data-value="2412689350">2s 412ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">SetupProjectStepDefinitions.user_clicks_on_set_up_Project_icon()</td>
+              <td>6</td>
+              <td class="duration" data-value="52793861300">52s 793ms</td>
+              <td class="duration" data-value="8798976883">8s 798ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">SetupProjectStepDefinitions.user_clicks_on_submit_another_item()</td>
+              <td>7</td>
+              <td class="duration" data-value="55011191700">55s 011ms</td>
+              <td class="duration" data-value="7858741671">7s 858ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">SetupProjectStepDefinitions.user_navigates_to_Isg_Landing_Page()</td>
+              <td>7</td>
+              <td class="duration" data-value="25032365300">25s 032ms</td>
+              <td class="duration" data-value="3576052185">3s 576ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">SetupProjectStepDefinitions.user_verifies_project_details_click_next()</td>
+              <td>6</td>
+              <td class="duration" data-value="38603520000">38s 603ms</td>
+              <td class="duration" data-value="6433920000">6s 433ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">SetupProjectStepDefinitions.verify_for_Notifications()</td>
+              <td>6</td>
+              <td class="duration" data-value="67227955300">1m 7s 227ms</td>
+              <td class="duration" data-value="11204659216">11s 204ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                  </tbody>
+
+        <tfoot class="total">
+          <tr>
+            <td>20</td>
+            <td>89</td>
+            <td class="duration">5m 55s 319ms</td>
+            <td class="duration">3s 992ms</td>
+            <td>Totals</td>
+          </tr>
+        </tfoot>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>

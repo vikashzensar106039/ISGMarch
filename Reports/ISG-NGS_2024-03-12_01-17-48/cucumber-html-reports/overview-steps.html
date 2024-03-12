@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.tablesorter.min.js"></script>
+<script type="text/javascript" src="js/Chart.min.js"></script>
+<script type="text/javascript" src="js/moment.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+  
+<title>Cucumber Reports  - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+                <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="overview-steps.html">Steps</a></li>
+                <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+    
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+            <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>ISG-NGS</td>
+            <td>12 Mar 2024, 13:47</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+      </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Steps Statistics</h2>
+          <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+      </div>
+</div>
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table id="tablesorter" class="stats-table table-hover">
+
+        <thead>
+          <tr class="header">
+            <th>Implementation</th>
+            <th>Occurrences</th>
+            <th>Duration</th>
+            <th>Average</th>
+            <th>Ratio</th>
+          </tr>
+        </thead>
+
+        <tbody>
+                      <tr>
+              <td class="location">ActiveTransactionProjectContactStepDefinitions.Add_Email_Address_for_the_Lead_Attorney_and_click_on_save_contact()</td>
+              <td>2</td>
+              <td class="duration" data-value="5589152500">5s 589ms</td>
+              <td class="duration" data-value="2794576250">2s 794ms</td>
+              <td class="failed">50.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">ActiveTransactionProjectContactStepDefinitions.Add_Lead_Attorney_Last_Name()</td>
+              <td>4</td>
+              <td class="duration" data-value="10881085200">10s 881ms</td>
+              <td class="duration" data-value="2720271300">2s 720ms</td>
+              <td class="failed">50.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">ActiveTransactionProjectContactStepDefinitions.User_clicks_first_Active_Transaction()</td>
+              <td>31</td>
+              <td class="duration" data-value="324519900800">5m 24s 519ms</td>
+              <td class="duration" data-value="10468383896">10s 468ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">ActiveTransactionProjectContactStepDefinitions.add_Client_Lead_Email_Address_click_on_next()</td>
+              <td>7</td>
+              <td class="duration" data-value="27515538100">27s 515ms</td>
+              <td class="duration" data-value="3930791157">3s 930ms</td>
+              <td class="failed">71.43%</td>
+            </tr>
+                      <tr>
+              <td class="location">ActiveTransactionProjectContactStepDefinitions.add_Email_Address_Attorney_Click_save_Contact()</td>
+              <td>1</td>
+              <td class="duration" data-value="6182171400">6s 182ms</td>
+              <td class="duration" data-value="6182171400">6s 182ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">ActiveTransactionProjectContactStepDefinitions.add_Email_Address_ISG_Click_save_Contact()</td>
+              <td>1</td>
+              <td class="duration" data-value="65436268800">1m 5s 436ms</td>
+              <td class="duration" data-value="65436268800">1m 5s 436ms</td>
+              <td class="failed">0.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">ActiveTransactionProjectContactStepDefinitions.add_Email_Address_Member_Click_on_save_Contact()</td>
+              <td>1</td>
+              <td class="duration" data-value="65751083400">1m 5s 751ms</td>
+              <td class="duration" data-value="65751083400">1m 5s 751ms</td>
+              <td class="failed">0.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">ActiveTransactionProjectContactStepDefinitions.add_Email_Address_for_Member_save_Contact()</td>
+              <td>1</td>
+              <td class="duration" data-value="595997100">595ms</td>
+              <td class="duration" data-value="595997100">595ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">ActiveTransactionProjectContactStepDefinitions.add_Email_Address_for_the_Lead_Attorney()</td>
+              <td>2</td>
+              <td class="duration" data-value="5452120100">5s 452ms</td>
+              <td class="duration" data-value="2726060050">2s 726ms</td>
+              <td class="failed">50.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">ActiveTransactionProjectContactStepDefinitions.add_Email_Address_for_the_Member_and_Click_on_save_Contact()</td>
+              <td>2</td>
+              <td class="duration" data-value="743661300">743ms</td>
+              <td class="duration" data-value="371830650">371ms</td>
+              <td class="failed">50.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">ActiveTransactionProjectContactStepDefinitions.add_Lead_Attorney_First_Name()</td>
+              <td>4</td>
+              <td class="duration" data-value="21716367500">21s 716ms</td>
+              <td class="duration" data-value="5429091875">5s 429ms</td>
+              <td class="failed">50.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">ActiveTransactionProjectContactStepDefinitions.add_mobile_for_Lead_Attorney_and_Click_on_save_Contact()</td>
+              <td>2</td>
+              <td class="duration" data-value="5560628000">5s 560ms</td>
+              <td class="duration" data-value="2780314000">2s 780ms</td>
+              <td class="failed">50.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">ActiveTransactionProjectContactStepDefinitions.add_the_new_Lead_Attorney()</td>
+              <td>4</td>
+              <td class="duration" data-value="40650052100">40s 650ms</td>
+              <td class="duration" data-value="10162513025">10s 162ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">ActiveTransactionProjectContactStepDefinitions.check_view_option_in_removed_contact()</td>
+              <td>1</td>
+              <td class="duration" data-value="5508184600">5s 508ms</td>
+              <td class="duration" data-value="5508184600">5s 508ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">ActiveTransactionProjectContactStepDefinitions.click_isg_contact()</td>
+              <td>3</td>
+              <td class="duration" data-value="34888293200">34s 888ms</td>
+              <td class="duration" data-value="11629431066">11s 629ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">ActiveTransactionProjectContactStepDefinitions.click_show_removed_contact()</td>
+              <td>1</td>
+              <td class="duration" data-value="5501524800">5s 501ms</td>
+              <td class="duration" data-value="5501524800">5s 501ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">ActiveTransactionProjectContactStepDefinitions.clicks_on_Next_Add_Client_Lead()</td>
+              <td>8</td>
+              <td class="duration" data-value="76554532100">1m 16s 554ms</td>
+              <td class="duration" data-value="9569316512">9s 569ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">ActiveTransactionProjectContactStepDefinitions.confirm_new_client_lead()</td>
+              <td>1</td>
+              <td class="duration" data-value="5466066000">5s 466ms</td>
+              <td class="duration" data-value="5466066000">5s 466ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">ActiveTransactionProjectContactStepDefinitions.enter_Client_First_Name_Last_Name()</td>
+              <td>2</td>
+              <td class="duration" data-value="5591235800">5s 591ms</td>
+              <td class="duration" data-value="2795617900">2s 795ms</td>
+              <td class="failed">50.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">ActiveTransactionProjectContactStepDefinitions.navigate_Project_Overview_section_add_project_overview()</td>
+              <td>16</td>
+              <td class="duration" data-value="170187038000">2m 50s 187ms</td>
+              <td class="duration" data-value="10636689875">10s 636ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">ActiveTransactionProjectContactStepDefinitions.select_Anticipated_award_Date()</td>
+              <td>8</td>
+              <td class="duration" data-value="41870294000">41s 870ms</td>
+              <td class="duration" data-value="5233786750">5s 233ms</td>
+              <td class="failed">75.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">ActiveTransactionProjectContactStepDefinitions.select_Competitive_Project()</td>
+              <td>8</td>
+              <td class="duration" data-value="32258440100">32s 258ms</td>
+              <td class="duration" data-value="4032305012">4s 032ms</td>
+              <td class="failed">75.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">ActiveTransactionProjectContactStepDefinitions.select_Job_tittle_of_lead_Attorney()</td>
+              <td>2</td>
+              <td class="duration" data-value="5533147200">5s 533ms</td>
+              <td class="duration" data-value="2766573600">2s 766ms</td>
+              <td class="failed">50.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">ActiveTransactionProjectContactStepDefinitions.select_Lead_Attorney_Legal_firm()</td>
+              <td>4</td>
+              <td class="duration" data-value="10908994800">10s 908ms</td>
+              <td class="duration" data-value="2727248700">2s 727ms</td>
+              <td class="failed">50.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">ActiveTransactionProjectContactStepDefinitions.select_Lead_Attorney_Pronouns()</td>
+              <td>2</td>
+              <td class="duration" data-value="5413755000">5s 413ms</td>
+              <td class="duration" data-value="2706877500">2s 706ms</td>
+              <td class="failed">50.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">ActiveTransactionProjectContactStepDefinitions.select_Primary_objevtives_of_sourcing()</td>
+              <td>2</td>
+              <td class="duration" data-value="5486327400">5s 486ms</td>
+              <td class="duration" data-value="2743163700">2s 743ms</td>
+              <td class="failed">50.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">ActiveTransactionProjectContactStepDefinitions.select_Project_Role_Client_lead()</td>
+              <td>1</td>
+              <td class="duration" data-value="5430962100">5s 430ms</td>
+              <td class="duration" data-value="5430962100">5s 430ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">ActiveTransactionProjectContactStepDefinitions.user_Add_Email_Address_for_the_Member()</td>
+              <td>2</td>
+              <td class="duration" data-value="563179800">563ms</td>
+              <td class="duration" data-value="281589900">281ms</td>
+              <td class="failed">50.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">ActiveTransactionProjectContactStepDefinitions.user_Add_mobile_and_Click_on_save_Contact()</td>
+              <td>2</td>
+              <td class="duration" data-value="609363700">609ms</td>
+              <td class="duration" data-value="304681850">304ms</td>
+              <td class="failed">50.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">ActiveTransactionProjectContactStepDefinitions.user_Select_Project_Responsibilties()</td>
+              <td>2</td>
+              <td class="duration" data-value="5660748300">5s 660ms</td>
+              <td class="duration" data-value="2830374150">2s 830ms</td>
+              <td class="failed">50.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">ActiveTransactionProjectContactStepDefinitions.verify_Project_Responsibilities_data_room_owner_role()</td>
+              <td>1</td>
+              <td class="duration" data-value="8106720400">8s 106ms</td>
+              <td class="duration" data-value="8106720400">8s 106ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">ActiveTransactionProjectContactStepDefinitions.verify_for_Active_Notifications()</td>
+              <td>31</td>
+              <td class="duration" data-value="499237004300">8m 19s 237ms</td>
+              <td class="duration" data-value="16104419493">16s 104ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">ActiveTransactionProjectContactStepDefinitions.verify_remove_contact_button()</td>
+              <td>1</td>
+              <td class="duration" data-value="62017004100">1m 2s 017ms</td>
+              <td class="duration" data-value="62017004100">1m 2s 017ms</td>
+              <td class="failed">0.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">ActiveTransactionProviderListStepDefinitions.Able_to_see_In_Removed_provider_reinstate_provider()</td>
+              <td>1</td>
+              <td class="duration" data-value="13318286700">13s 318ms</td>
+              <td class="duration" data-value="13318286700">13s 318ms</td>
+              <td class="failed">0.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">ActiveTransactionProviderListStepDefinitions.able_to_click_on_Edit_change_values()</td>
+              <td>1</td>
+              <td class="duration" data-value="66425261700">1m 6s 425ms</td>
+              <td class="duration" data-value="66425261700">1m 6s 425ms</td>
+              <td class="failed">0.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">ActiveTransactionProviderListStepDefinitions.able_to_click_on_export_provider_list()</td>
+              <td>1</td>
+              <td class="duration" data-value="4388020800">4s 388ms</td>
+              <td class="duration" data-value="4388020800">4s 388ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">ActiveTransactionProviderListStepDefinitions.able_to_see_In_Process_provider_Removed_Provider()</td>
+              <td>1</td>
+              <td class="duration" data-value="4758676200">4s 758ms</td>
+              <td class="duration" data-value="4758676200">4s 758ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">ActiveTransactionProviderListStepDefinitions.able_to_see_In_Process_provider_add_provider()</td>
+              <td>1</td>
+              <td class="duration" data-value="65102134700">1m 5s 102ms</td>
+              <td class="duration" data-value="65102134700">1m 5s 102ms</td>
+              <td class="failed">0.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">ActiveTransactionProviderListStepDefinitions.able_to_see_In_Process_provider_delete_provider()</td>
+              <td>1</td>
+              <td class="duration" data-value="5082884900">5s 082ms</td>
+              <td class="duration" data-value="5082884900">5s 082ms</td>
+              <td class="failed">0.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">ActiveTransactionProviderListStepDefinitions.user_will_able_to_click_view_provider_list()</td>
+              <td>6</td>
+              <td class="duration" data-value="49519163500">49s 519ms</td>
+              <td class="duration" data-value="8253193916">8s 253ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">ActiveTransactionScopeBuilderStepDefinitions.user_Clicks_on_Items_in_Scope_Basket_Save_Basket()</td>
+              <td>4</td>
+              <td class="duration" data-value="19468929900">19s 468ms</td>
+              <td class="duration" data-value="4867232475">4s 867ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">ActiveTransactionScopeBuilderStepDefinitions.user_clicks_on_Go_to_scope_builder()</td>
+              <td>4</td>
+              <td class="duration" data-value="42314691600">42s 314ms</td>
+              <td class="duration" data-value="10578672900">10s 578ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">ActiveTransactionScopeBuilderStepDefinitions.user_deselects_FA_from_section()</td>
+              <td>1</td>
+              <td class="duration" data-value="10935854800">10s 935ms</td>
+              <td class="duration" data-value="10935854800">10s 935ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">ActiveTransactionScopeBuilderStepDefinitions.user_deselects_one_Process_from_section()</td>
+              <td>1</td>
+              <td class="duration" data-value="10338766800">10s 338ms</td>
+              <td class="duration" data-value="10338766800">10s 338ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">ActiveTransactionScopeBuilderStepDefinitions.user_selects_FA_from_section()</td>
+              <td>1</td>
+              <td class="duration" data-value="4368917100">4s 368ms</td>
+              <td class="duration" data-value="4368917100">4s 368ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">ActiveTransactionScopeBuilderStepDefinitions.user_selects_commonly_packed_service()</td>
+              <td>1</td>
+              <td class="duration" data-value="5611952700">5s 611ms</td>
+              <td class="duration" data-value="5611952700">5s 611ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">ActiveTransactionStepDefinitions.Select_Application_Included()</td>
+              <td>1</td>
+              <td class="duration" data-value="2698855400">2s 698ms</td>
+              <td class="duration" data-value="2698855400">2s 698ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">ActiveTransactionStepDefinitions.User_not_able_to_Update_Project_Overview()</td>
+              <td>1</td>
+              <td class="duration" data-value="130685596600">2m 10s 685ms</td>
+              <td class="duration" data-value="130685596600">2m 10s 685ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">ActiveTransactionStepDefinitions.check_for_contract_signed_date()</td>
+              <td>1</td>
+              <td class="duration" data-value="4448166000">4s 448ms</td>
+              <td class="duration" data-value="4448166000">4s 448ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">ActiveTransactionStepDefinitions.maximum_Character_Provider()</td>
+              <td>1</td>
+              <td class="duration" data-value="91276561000">1m 31s 276ms</td>
+              <td class="duration" data-value="91276561000">1m 31s 276ms</td>
+              <td class="failed">0.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">ActiveTransactionStepDefinitions.maximum_Character_future_prospects()</td>
+              <td>1</td>
+              <td class="duration" data-value="75726883500">1m 15s 726ms</td>
+              <td class="duration" data-value="75726883500">1m 15s 726ms</td>
+              <td class="failed">0.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">ActiveTransactionStepDefinitions.select_Cloud_strategy()</td>
+              <td>1</td>
+              <td class="duration" data-value="3864187200">3s 864ms</td>
+              <td class="duration" data-value="3864187200">3s 864ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">ActiveTransactionStepDefinitions.select_contract_duration_years()</td>
+              <td>1</td>
+              <td class="duration" data-value="4306996800">4s 306ms</td>
+              <td class="duration" data-value="4306996800">4s 306ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">ActiveTransactionStepDefinitions.select_type_automation_project()</td>
+              <td>1</td>
+              <td class="duration" data-value="3925875300">3s 925ms</td>
+              <td class="duration" data-value="3925875300">3s 925ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">ActiveTransactionStepDefinitions.user_Updates_Project_Overview()</td>
+              <td>1</td>
+              <td class="duration" data-value="10491796700">10s 491ms</td>
+              <td class="duration" data-value="10491796700">10s 491ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">ActiveTransactionStepDefinitions.user_Validates_Maximum_Character_Project_Overview()</td>
+              <td>1</td>
+              <td class="duration" data-value="54056473000">54s 056ms</td>
+              <td class="duration" data-value="54056473000">54s 056ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">ActiveTransactionStepDefinitions.user_logs_in_to_ISG_as_Client()</td>
+              <td>1</td>
+              <td class="duration" data-value="17548229000">17s 548ms</td>
+              <td class="duration" data-value="17548229000">17s 548ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">ActiveTransactionStepDefinitions.what_improvements_suggest_future_pursuits_save()</td>
+              <td>1</td>
+              <td class="duration" data-value="3000">000ms</td>
+              <td class="duration" data-value="3000">000ms</td>
+              <td class="failed">0.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">ActiveTransactionStepDefinitions.what_provider_well()</td>
+              <td>1</td>
+              <td class="duration" data-value="4049316600">4s 049ms</td>
+              <td class="duration" data-value="4049316600">4s 049ms</td>
+              <td class="failed">0.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">CloseTransactionStepDefinitions.Verify_for_Close_Transaction()</td>
+              <td>1</td>
+              <td class="duration" data-value="19159579400">19s 159ms</td>
+              <td class="duration" data-value="19159579400">19s 159ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">CloseTransactionStepDefinitions.clicks_on_Next_Add_Client_Lead()</td>
+              <td>1</td>
+              <td class="duration" data-value="200">000ms</td>
+              <td class="duration" data-value="200">000ms</td>
+              <td class="failed">0.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">CloseTransactionStepDefinitions.navigate_Project_Overview_section_add_project_overview()</td>
+              <td>1</td>
+              <td class="duration" data-value="400">000ms</td>
+              <td class="duration" data-value="400">000ms</td>
+              <td class="failed">0.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">CloseTransactionStepDefinitions.select_Anticipated_award_Date()</td>
+              <td>1</td>
+              <td class="duration" data-value="200">000ms</td>
+              <td class="duration" data-value="200">000ms</td>
+              <td class="failed">0.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">CloseTransactionStepDefinitions.select_Competitive_Project()</td>
+              <td>1</td>
+              <td class="duration" data-value="200">000ms</td>
+              <td class="duration" data-value="200">000ms</td>
+              <td class="failed">0.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">CloseTransactionStepDefinitions.user_clicks_on_set_up_Project_icon()</td>
+              <td>1</td>
+              <td class="duration" data-value="62421356100">1m 2s 421ms</td>
+              <td class="duration" data-value="62421356100">1m 2s 421ms</td>
+              <td class="failed">0.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">CloseTransactionStepDefinitions.user_verifies_project_details_click_next()</td>
+              <td>1</td>
+              <td class="duration" data-value="11100">000ms</td>
+              <td class="duration" data-value="11100">000ms</td>
+              <td class="failed">0.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Hooks.setupEnvironment(Scenario)</td>
+              <td>39</td>
+              <td class="duration" data-value="110707418600">1m 50s 707ms</td>
+              <td class="duration" data-value="2838651758">2s 838ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Hooks.tearDown(Scenario)</td>
+              <td>39</td>
+              <td class="duration" data-value="861423700">861ms</td>
+              <td class="duration" data-value="22087787">022ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">SetupProjectStepDefinitions.Add_Client_Lead_Email_Address_click_on_next_after_validation()</td>
+              <td>1</td>
+              <td class="duration" data-value="3601590400">3s 601ms</td>
+              <td class="duration" data-value="3601590400">3s 601ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">SetupProjectStepDefinitions.Enter_Client_First_Name_Validation_and_enter_Last_Name()</td>
+              <td>1</td>
+              <td class="duration" data-value="4523163700">4s 523ms</td>
+              <td class="duration" data-value="4523163700">4s 523ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">SetupProjectStepDefinitions.Enter_Client_First_Name_and_enter_Last_Name_with_validation()</td>
+              <td>1</td>
+              <td class="duration" data-value="4181019100">4s 181ms</td>
+              <td class="duration" data-value="4181019100">4s 181ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">SetupProjectStepDefinitions.Select_sole_source_Project_and_reason()</td>
+              <td>1</td>
+              <td class="duration" data-value="4944945400">4s 944ms</td>
+              <td class="duration" data-value="4944945400">4s 944ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">SetupProjectStepDefinitions.Verify_and_check_for_number_of_Notifications()</td>
+              <td>1</td>
+              <td class="duration" data-value="15661826100">15s 661ms</td>
+              <td class="duration" data-value="15661826100">15s 661ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">SetupProjectStepDefinitions.add_Client_Lead_Email_Address_click_on_next()</td>
+              <td>5</td>
+              <td class="duration" data-value="4800206800">4s 800ms</td>
+              <td class="duration" data-value="960041360">960ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">SetupProjectStepDefinitions.clicks_on_Next_Add_Client_Lead()</td>
+              <td>6</td>
+              <td class="duration" data-value="4230205600">4s 230ms</td>
+              <td class="duration" data-value="705034266">705ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">SetupProjectStepDefinitions.enter_Client_First_Name_Last_Name()</td>
+              <td>4</td>
+              <td class="duration" data-value="2704601000">2s 704ms</td>
+              <td class="duration" data-value="676150250">676ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">SetupProjectStepDefinitions.navigate_Project_Overview_section_add_project_overview()</td>
+              <td>5</td>
+              <td class="duration" data-value="4009360200">4s 009ms</td>
+              <td class="duration" data-value="801872040">801ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">SetupProjectStepDefinitions.navigate_Project_Overview_section_add_project_overview_5000_Chracter_check()</td>
+              <td>1</td>
+              <td class="duration" data-value="805304500">805ms</td>
+              <td class="duration" data-value="805304500">805ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">SetupProjectStepDefinitions.select_Anticipated_award_Date()</td>
+              <td>6</td>
+              <td class="duration" data-value="27197635200">27s 197ms</td>
+              <td class="duration" data-value="4532939200">4s 532ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">SetupProjectStepDefinitions.select_Competitive_Project()</td>
+              <td>5</td>
+              <td class="duration" data-value="11921144800">11s 921ms</td>
+              <td class="duration" data-value="2384228960">2s 384ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">SetupProjectStepDefinitions.select_Primary_objevtives_of_sourcing()</td>
+              <td>6</td>
+              <td class="duration" data-value="14274206500">14s 274ms</td>
+              <td class="duration" data-value="2379034416">2s 379ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">SetupProjectStepDefinitions.user_clicks_on_set_up_Project_icon()</td>
+              <td>6</td>
+              <td class="duration" data-value="52581683900">52s 581ms</td>
+              <td class="duration" data-value="8763613983">8s 763ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">SetupProjectStepDefinitions.user_clicks_on_submit_another_item()</td>
+              <td>38</td>
+              <td class="duration" data-value="327699963700">5m 27s 699ms</td>
+              <td class="duration" data-value="8623683255">8s 623ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">SetupProjectStepDefinitions.user_navigates_to_Isg_Landing_Page()</td>
+              <td>39</td>
+              <td class="duration" data-value="166921976800">2m 46s 921ms</td>
+              <td class="duration" data-value="4280050687">4s 280ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">SetupProjectStepDefinitions.user_verifies_project_details_click_next()</td>
+              <td>6</td>
+              <td class="duration" data-value="38013074500">38s 013ms</td>
+              <td class="duration" data-value="6335512416">6s 335ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">SetupProjectStepDefinitions.verify_for_Notifications()</td>
+              <td>6</td>
+              <td class="duration" data-value="69354473500">1m 9s 354ms</td>
+              <td class="duration" data-value="11559078916">11s 559ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                  </tbody>
+
+        <tfoot class="total">
+          <tr>
+            <td>86</td>
+            <td>420</td>
+            <td class="duration">53m 42s 675ms</td>
+            <td class="duration">7s 673ms</td>
+            <td>Totals</td>
+          </tr>
+        </tfoot>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>
